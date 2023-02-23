@@ -1,0 +1,92 @@
+﻿@model VendorModelOffer
+
+<form asp-controller="Home" asp-action="SaveOfferVendorModel" method="post">
+ 
+    <div class="form-group">
+        <label asp-for="id">id</label>
+        <input asp-for="id" value="@Model.id" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="type">type</label>
+        <input asp-for="type" value="@Model.type" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="bid">bid</label>
+        <input asp-for="bid" value="@Model.bid" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="cbid">cbid</label>
+        <input asp-for="cbid" value="@Model.cbid" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="available">available</label>
+        <input asp-for="available" value="@Model.available" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="url">url</label>
+        <input asp-for="url" value="@Model.url" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="price">price</label>
+        <input asp-for="price" value="@Model.price" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="currencyId">currencyId</label>
+        <input asp-for="currencyId" value="@Model.currencyId" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="categoryId">categoryId</label>
+        <input asp-for="categoryId" value="@Model.categoryId" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="categoryIdType">categoryIdType</label>
+        <input asp-for="categoryIdType" value="@Model.categoryIdType" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="picture">picture</label>
+        <input asp-for="picture" value="@Model.picture" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="delivery">delivery</label>
+        <input asp-for="delivery" value="@Model.delivery" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="localDeliveryCost">localDeliveryCost</label>
+        <input asp-for="localDeliveryCost" value="@Model.localDeliveryCost" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="typePrefix">typePrefix</label>
+        <input asp-for="typePrefix" value="@Model.typePrefix" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="vendor">vendor</label>
+        <input asp-for="vendor" value="@Model.vendor" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="vendorCode">vendorCode</label>
+        <input asp-for="vendorCode" value="@Model.vendorCode" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="model">model</label>
+        <input asp-for="model" value="@Model.model" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="description">description</label>
+        <input asp-for="description" value="@Model.description" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="manufacturerWarranty">manufacturerWarranty</label>
+        <input asp-for="manufacturerWarranty" value="@Model.manufacturerWarranty" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="countryOforigin">countryOforigin</label>
+        <input asp-for="countryOforigin" value="@Model.countryOforigin" class="form-control" readonly />
+    </div>
+
+    <div class="col d-grid">
+        <input type="submit" class="btn btn-primary m-2" value="Сохранить в Базу Данных" />
+    </div>
+</form>
+<div class="col d-grid">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary m-2">Назад</a>
+</div>

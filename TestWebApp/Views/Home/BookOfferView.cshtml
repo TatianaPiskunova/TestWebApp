@@ -1,0 +1,112 @@
+﻿@model BookOffer
+
+<form asp-controller="Home" asp-action="SaveOfferBook" method="post">
+
+        <div class="form-group">
+            <label asp-for="id">id</label>
+            <input asp-for="id" value="@Model.id" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="type">type</label>
+            <input asp-for="type" value="@Model.type" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="bid">bid</label>
+            <input asp-for="bid" value="@Model.bid" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="available">available</label>
+            <input asp-for="available" value="@Model.available" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="url">url</label>
+            <input asp-for="url" value="@Model.url" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="price">price</label>
+            <input asp-for="price" value="@Model.price" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="currencyId">currencyId</label>
+            <input asp-for="currencyId" value="@Model.currencyId" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="categoryId">categoryId</label>
+            <input asp-for="categoryId" value="@Model.categoryId" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="categoryIdType">categoryIdType</label>
+            <input asp-for="categoryIdType" value="@Model.categoryIdType" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="picture">picture</label>
+            <input asp-for="picture" value="@Model.picture" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="delivery">delivery</label>
+            <input asp-for="delivery" value="@Model.delivery" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="localDeliveryCost">localDeliveryCost</label>
+            <input asp-for="localDeliveryCost" value="@Model.localDeliveryCost" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="author">author</label>
+            <input asp-for="author" value="@Model.author" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="name">name</label>
+            <input asp-for="name" value="@Model.name" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="publisher">publisher</label>
+            <input asp-for="publisher" value="@Model.publisher" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="series">series</label>
+            <input asp-for="series" value="@Model.series" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="year">year</label>
+            <input asp-for="year" value="@Model.year" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="ISBN">ISBN</label>
+            <input asp-for="ISBN" value="@Model.ISBN" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="volume">volume</label>
+            <input asp-for="volume" value="@Model.volume" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="part">part</label>
+            <input asp-for="part" value="@Model.part" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="language">language</label>
+            <input asp-for="language" value="@Model.language" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="binding">binding</label>
+            <input asp-for="binding" value="@Model.binding" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="pageExtent">pageExtent</label>
+            <input asp-for="pageExtent" value="@Model.pageExtent" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="description">description</label>
+            <input asp-for="description" value="@Model.description" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="downloadable">downloadable</label>
+            <input asp-for="downloadable" value="@Model.downloadable" class="form-control" readonly />
+        </div>
+
+        <div class="col d-grid">
+            <input type="submit" class="btn btn-primary m-2" value="Сохранить в Базу Данных" />
+        </div>
+    </form>
+    <div class="col d-grid">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary m-2">Назад</a>
+    </div>

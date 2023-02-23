@@ -1,0 +1,663 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row m-2">
+    <div class="col d-grid">
+        <a asp-controller="Home" asp-action="SearchOffer" class="btn btn-primary">Поиск заказа по номеру</a>
+    </div>
+</div>
+
+<h2>Категории</h2>
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">ParentId</th>
+            <th scope="col">Название</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in @ViewBag.listOfCategories){
+        <tr>
+            <th scope="row">@a.id</th>
+                <td>@a.parentId</td>
+                <td>@a.Name</td>
+            
+        </tr>
+        }
+    </tbody>
+</table>
+<h2>Заказы</h2>
+
+@foreach (var b in @ViewBag.listOfVendorModelOffer)
+{
+<table class="table table-sm table-bordered caption-top">
+    <caption>Заказ @b.id</caption>
+    <thead class="table-light">
+        <tr>
+            <th scope="col">key</th>
+            <th scope="col">value</th>
+
+        </tr>
+    </thead>
+     <tbody>
+      
+            <tr>
+                <th scope="row">type</th>
+                <td>@b.type</td>
+            </tr>
+            <tr>
+                <th scope="row">bid</th>
+                <td>@b.bid</td>
+            </tr>
+             <tr>
+                <th scope="row">cbid</th>
+                <td>@b.cbid</td>
+            </tr>
+            <tr>
+                <th scope="row">available</th>
+                <td>@b.available</td>
+            </tr>
+            <tr>
+                <th scope="row">url</th>
+                <td>@b.url</td>
+            </tr>
+            <tr>
+                <th scope="row">price</th>
+                <td>@b.price</td>
+            </tr>
+             <tr>
+                <th scope="row">currencyId</th>
+                <td>@b.currencyId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryId</th>
+                <td>@b.categoryId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryIdType</th>
+                <td>@b.categoryIdType</td>
+            </tr>
+            <tr>
+                <th scope="row">picture</th>
+                <td>@b.picture</td>
+            </tr>
+             <tr>
+                <th scope="row">delivery</th>
+                <td>@b.delivery</td>
+            </tr>
+            <tr>
+                <th scope="row">localDeliveryCost</th>
+                <td>@b.localDeliveryCost</td>
+            </tr>
+            <tr>
+                <th scope="row">typePrefix</th>
+                <td>@b.typePrefix</td>
+            </tr>
+            <tr>
+                <th scope="row">vendor</th>
+                <td>@b.vendor</td>
+            </tr>
+             <tr>
+                <th scope="row">vendorCode</th>
+                <td>@b.vendorCode</td>
+            </tr>
+            <tr>
+                <th scope="row">model</th>
+                <td>@b.model</td>
+            </tr>
+             <tr>
+                <th scope="row">description</th>
+                <td>@b.description</td>
+            </tr>
+             <tr>
+                <th scope="row">manufacturerWarranty</th>
+                <td>@b.manufacturerWarranty</td>
+            </tr>
+            <tr>
+                <th scope="row">countryOforigin</th>
+                <td>@b.countryOforigin</td>
+            </tr>
+           
+            
+
+            
+      
+    </tbody>
+</table>
+}
+
+
+
+@foreach (var b in @ViewBag.listOfBookOffer)
+{
+<table class="table table-sm table-bordered caption-top">
+    <caption>Заказ @b.id</caption>
+    <thead class="table-light">
+        <tr>
+            <th scope="col">key</th>
+            <th scope="col">value</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+            <tr>
+                <th scope="row">type</th>
+                <td>@b.type</td>
+            </tr>
+            <tr>
+                <th scope="row">bid</th>
+                <td>@b.bid</td>
+            </tr>
+            <tr>
+                <th scope="row">available</th>
+                <td>@b.available</td>
+            </tr>
+            <tr>
+                <th scope="row">url</th>
+                <td>@b.url</td>
+            </tr>
+            <tr>
+                <th scope="row">price</th>
+                <td>@b.price</td>
+            </tr>
+            <tr>
+                <th scope="row">currencyId</th>
+                <td>@b.currencyId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryId</th>
+                <td>@b.categoryId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryIdType</th>
+                <td>@b.categoryIdType</td>
+            </tr>
+            <tr>
+                <th scope="row">picture</th>
+                <td>@b.picture</td>
+            </tr>
+            <tr>
+                <th scope="row">delivery</th>
+                <td>@b.delivery</td>
+            </tr>
+            <tr>
+                <th scope="row">localDeliveryCost</th>
+                <td>@b.localDeliveryCost</td>
+            </tr>
+            <tr>
+                <th scope="row">author</th>
+                <td>@b.author</td>
+            </tr>
+            <tr>
+                <th scope="row">name</th>
+                <td>@b.name</td>
+            </tr>
+            <tr>
+                <th scope="row">publisher</th>
+                <td>@b.publisher</td>
+            </tr>
+            <tr>
+                <th scope="row">series</th>
+                <td>@b.series</td>
+            </tr>
+            <tr>
+                <th scope="row">year</th>
+                <td>@b.year</td>
+            </tr>
+            <tr>
+                <th scope="row">ISBN</th>
+                <td>@b.ISBN</td>
+            </tr>
+            <tr>
+                <th scope="row">volume</th>
+                <td>@b.volume</td>
+            </tr>
+
+             <tr>
+                <th scope="row">part</th>
+                <td>@b.part</td>
+            </tr>
+            <tr>
+                <th scope="row">language</th>
+                <td>@b.language</td>
+            </tr>
+            <tr>
+                <th scope="row">binding</th>
+                <td>@b.binding</td>
+            </tr>
+            <tr>
+                <th scope="row">pageExtent</th>
+                <td>@b.pageExtent</td>
+            </tr>
+            <tr>
+                <th scope="row">description</th>
+                <td>@b.description</td>
+            </tr>
+            <tr>
+                <th scope="row">downloadable</th>
+                <td>@b.downloadable</td>
+            </tr>
+
+    </tbody>
+</table>
+}
+
+ @foreach (var b in @ViewBag.listOfAudiobookOffer)
+{
+<table class="table table-sm table-bordered caption-top">
+    <caption>Заказ @b.id</caption>
+    <thead class="table-light">
+        <tr>
+            <th scope="col">key</th>
+            <th scope="col">value</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+            <tr>
+                <th scope="row">type</th>
+                <td>@b.type</td>
+            </tr>
+            <tr>
+                <th scope="row">bid</th>
+                <td>@b.bid</td>
+            </tr>
+            <tr>
+                <th scope="row">available</th>
+                <td>@b.available</td>
+            </tr>
+            <tr>
+                <th scope="row">url</th>
+                <td>@b.url</td>
+            </tr>
+            <tr>
+                <th scope="row">price</th>
+                <td>@b.price</td>
+            </tr>
+            <tr>
+                <th scope="row">currencyId</th>
+                <td>@b.currencyId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryId</th>
+                <td>@b.categoryId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryIdType</th>
+                <td>@b.categoryIdType</td>
+            </tr>
+            <tr>
+                <th scope="row">picture</th>
+                <td>@b.picture</td>
+            </tr>
+            <tr>
+                <th scope="row">author</th>
+                <td>@b.author</td>
+            </tr>
+            <tr>
+                <th scope="row">name</th>
+                <td>@b.name</td>
+            </tr>
+            <tr>
+                <th scope="row">publisher</th>
+                <td>@b.publisher</td>
+            </tr>
+            <tr>
+                <th scope="row">year</th>
+                <td>@b.year</td>
+            </tr>
+            <tr>
+                <th scope="row">ISBN</th>
+                <td>@b.ISBN</td>
+            </tr>
+            <tr>
+                <th scope="row">language</th>
+                <td>@b.language</td>
+            </tr>
+            <tr>
+                <th scope="row">performedBy</th>
+                <td>@b.performedBy</td>
+            </tr>
+            <tr>
+                <th scope="row">performanceType</th>
+                <td>@b.performanceType</td>
+            </tr>
+            <tr>
+                <th scope="row">storage</th>
+                <td>@b.storage</td>
+            </tr>
+
+            <tr>
+                <th scope="row">format</th>
+                <td>@b.format</td>
+            </tr>
+            <tr>
+                <th scope="row">recordingLength</th>
+                <td>@b.recordingLength</td>
+            </tr>
+            <tr>
+                <th scope="row">description</th>
+                <td>@b.description</td>
+            </tr>
+            <tr>
+                <th scope="row">downloadable</th>
+                <td>@b.downloadable</td>
+            </tr>
+
+        
+    </tbody>
+</table>
+}
+
+@foreach (var b in @ViewBag.listOfArtistTitleOffer)
+{
+    <table class="table table-sm table-bordered caption-top">
+        <caption>Заказ @b.id</caption>
+        <thead class="table-light">
+            <tr>
+                <th scope="col">key</th>
+                <th scope="col">value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+                <tr>
+                    <th scope="row">type</th>
+                    <td>@b.type</td>
+                </tr>
+                <tr>
+                    <th scope="row">bid</th>
+                    <td>@b.bid</td>
+                </tr>
+                <tr>
+                    <th scope="row">available</th>
+                    <td>@b.available</td>
+                </tr>
+                <tr>
+                    <th scope="row">url</th>
+                    <td>@b.url</td>
+                </tr>
+                <tr>
+                    <th scope="row">price</th>
+                    <td>@b.price</td>
+                </tr>
+                <tr>
+                    <th scope="row">currencyId</th>
+                    <td>@b.currencyId</td>
+                </tr>
+                <tr>
+                    <th scope="row">categoryId</th>
+                    <td>@b.categoryId</td>
+                </tr>
+                <tr>
+                    <th scope="row">categoryIdType</th>
+                    <td>@b.categoryIdType</td>
+                </tr>
+                <tr>
+                    <th scope="row">picture</th>
+                    <td>@b.picture</td>
+                </tr>
+                <tr>
+                    <th scope="row">delivery</th>
+                    <td>@b.delivery</td>
+                </tr>
+                <tr>
+                    <th scope="row">artist</th>
+                    <td>@b.artist</td>
+                </tr>
+                <tr>
+                    <th scope="row">title</th>
+                    <td>@b.title</td>
+                </tr>
+                <tr>
+                    <th scope="row">year</th>
+                    <td>@b.year</td>
+                </tr>
+                <tr>
+                    <th scope="row">media</th>
+                    <td>@b.media</td>
+                </tr>
+                <tr>
+                    <th scope="row">starring</th>
+                    <td>@b.starring</td>
+                </tr>
+                <tr>
+                    <th scope="row">director</th>
+                    <td>@b.director</td>
+                </tr>
+                <tr>
+                    <th scope="row">originalName</th>
+                    <td>@b.originalName</td>
+                </tr>
+                <tr>
+                    <th scope="row">country</th>
+                    <td>@b.country</td>
+                </tr>
+                <tr>
+                    <th scope="row">description</th>
+                    <td>@b.description</td>
+                </tr>
+               
+            
+        </tbody>
+    </table>
+}
+
+
+@foreach (var b in @ViewBag.listOfTourOffer)
+{
+    <table class="table table-sm table-bordered caption-top">
+        <caption>Заказ @b.id</caption>
+        <thead class="table-light">
+            <tr>
+                <th scope="col">key</th>
+                <th scope="col">value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <th scope="row">type</th>
+                <td>@b.type</td>
+            </tr>
+            <tr>
+                <th scope="row">bid</th>
+                <td>@b.bid</td>
+            </tr>
+            <tr>
+                <th scope="row">available</th>
+                <td>@b.available</td>
+            </tr>
+            <tr>
+                <th scope="row">url</th>
+                <td>@b.url</td>
+            </tr>
+            <tr>
+                <th scope="row">price</th>
+                <td>@b.price</td>
+            </tr>
+            <tr>
+                <th scope="row">currencyId</th>
+                <td>@b.currencyId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryId</th>
+                <td>@b.categoryId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryIdType</th>
+                <td>@b.categoryIdType</td>
+            </tr>
+            <tr>
+                <th scope="row">picture</th>
+                <td>@b.picture</td>
+            </tr>
+            <tr>
+                <th scope="row">delivery</th>
+                <td>@b.delivery</td>
+            </tr>
+            <tr>
+                <th scope="row">localDeliveryCost</th>
+                <td>@b.localDeliveryCost</td>
+            </tr>
+            <tr>
+                <th scope="row">worldRegion</th>
+                <td>@b.worldRegion</td>
+            </tr>
+            <tr>
+                <th scope="row">country</th>
+                <td>@b.country</td>
+            </tr>
+            <tr>
+                <th scope="row">region</th>
+                <td>@b.region</td>
+            </tr>
+            <tr>
+                <th scope="row">days</th>
+                <td>@b.days</td>
+            </tr>
+            <tr>
+                <th scope="row">dataTour</th>
+                <td>@b.dataTour</td>
+            </tr>
+            <tr>
+                <th scope="row">name</th>
+                <td>@b.name</td>
+            </tr>
+            <tr>
+                <th scope="row">hotelStars</th>
+                <td>@b.hotelStars</td>
+            </tr>
+            <tr>
+                <th scope="row">room</th>
+                <td>@b.room</td>
+            </tr>
+            <tr>
+                <th scope="row">meal</th>
+                <td>@b.meal</td>
+            </tr>
+            <tr>
+                <th scope="row">included</th>
+                <td>@b.included</td>
+            </tr>
+            <tr>
+                <th scope="row">transport</th>
+                <td>@b.transport</td>
+            </tr>
+            <tr>
+                <th scope="row">description</th>
+                <td>@b.description</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+}
+
+@foreach (var b in @ViewBag.listOfEventTicketOffers)
+{
+    <table class="table table-sm table-bordered caption-top">
+        <caption>Заказ @b.id</caption>
+        <thead class="table-light">
+            <tr>
+                <th scope="col">key</th>
+                <th scope="col">value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <th scope="row">type</th>
+                <td>@b.type</td>
+            </tr>
+            <tr>
+                <th scope="row">bid</th>
+                <td>@b.bid</td>
+            </tr>
+            <tr>
+                <th scope="row">available</th>
+                <td>@b.available</td>
+            </tr>
+            <tr>
+                <th scope="row">url</th>
+                <td>@b.url</td>
+            </tr>
+            <tr>
+                <th scope="row">price</th>
+                <td>@b.price</td>
+            </tr>
+            <tr>
+                <th scope="row">currencyId</th>
+                <td>@b.currencyId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryId</th>
+                <td>@b.categoryId</td>
+            </tr>
+            <tr>
+                <th scope="row">categoryIdType</th>
+                <td>@b.categoryIdType</td>
+            </tr>
+            <tr>
+                <th scope="row">picture</th>
+                <td>@b.picture</td>
+            </tr>
+            <tr>
+                <th scope="row">delivery</th>
+                <td>@b.delivery</td>
+            </tr>
+            <tr>
+                <th scope="row">localDeliveryCost</th>
+                <td>@b.localDeliveryCost</td>
+            </tr>
+            <tr>
+                <th scope="row">name</th>
+                <td>@b.name</td>
+            </tr>
+            <tr>
+                <th scope="row">place</th>
+                <td>@b.place</td>
+            </tr>
+            <tr>
+                <th scope="row">hall</th>
+                <td>@b.hall</td>
+            </tr>
+            <tr>
+                <th scope="row">hallPlan</th>
+                <td>@b.hallPlan</td>
+            </tr>
+            <tr>
+                <th scope="row">hallPart</th>
+                <td>@b.hallPart</td>
+            </tr>
+            <tr>
+                <th scope="row">date</th>
+                <td>@b.date</td>
+            </tr>
+            <tr>
+                <th scope="row">isPremiere</th>
+                <td>@b.isPremiere</td>
+            </tr>
+            <tr>
+                <th scope="row">isKids</th>
+                <td>@b.isKids</td>
+            </tr>
+            <tr>
+                <th scope="row">description</th>
+                <td>@b.description</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+}

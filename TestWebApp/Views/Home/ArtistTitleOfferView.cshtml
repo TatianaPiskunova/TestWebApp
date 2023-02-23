@@ -1,0 +1,92 @@
+﻿@model ArtistTitleOffer
+
+<form asp-controller="Home" asp-action="SaveOfferArtistTitle" method="post">
+   
+    <div class="form-group">
+        <label asp-for="id">id</label>
+        <input asp-for="id" value="@Model.id" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="type">type</label>
+        <input asp-for="type" value="@Model.type" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="bid">bid</label>
+        <input asp-for="bid" value="@Model.bid" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="available">available</label>
+        <input asp-for="available" value="@Model.available" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="url">url</label>
+        <input asp-for="url" value="@Model.url" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="price">price</label>
+        <input asp-for="price" value="@Model.price" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="currencyId">currencyId</label>
+        <input asp-for="currencyId" value="@Model.currencyId" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="categoryId">categoryId</label>
+        <input asp-for="categoryId" value="@Model.categoryId" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="categoryIdType">categoryIdType</label>
+        <input asp-for="categoryIdType" value="@Model.categoryIdType" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="picture">picture</label>
+        <input asp-for="picture" value="@Model.picture" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="delivery">delivery</label>
+        <input asp-for="delivery" value="@Model.delivery" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="artist">artist</label>
+        <input asp-for="artist" value="@Model.artist" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="title">title</label>
+        <input asp-for="title" value="@Model.title" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="year">year</label>
+        <input asp-for="year" value="@Model.year" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="media">media</label>
+        <input asp-for="media" value="@Model.media" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="starring">starring</label>
+        <input asp-for="starring" value="@Model.starring" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="director">director</label>
+        <input asp-for="director" value="@Model.director" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="originalName">originalName</label>
+        <input asp-for="originalName" value="@Model.originalName" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="country">country</label>
+        <input asp-for="country" value="@Model.country" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="description">description</label>
+        <input asp-for="description" value="@Model.description" class="form-control" readonly />
+    </div>
+   
+    <div class="col d-grid">
+        <input type="submit" class="btn btn-primary m-2" value="Сохранить в Базу Данных" />
+    </div>
+</form>
+<div class="col d-grid">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary m-2">Назад</a>
+</div>
